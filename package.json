@@ -1,0 +1,22 @@
+{
+  "name": "math",
+  "module": "./src/index.ts",
+  "type": "module",
+  "scripts": {
+    "fmt": "biome format --write ./src/**/*.ts",
+    "fmt.check": "biome format ./src/**/*.ts",
+    "lint": "biome lint --apply ./src/**/*.ts",
+    "lint.check": "biome lint ./src/**/*.ts",
+    "fmt-lint": "bun run fmt && bun run lint",
+    "fmt-lint.check": "bun run fmt.check && bun run lint.check",
+    "start": "bun run ./src/index.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@types/bun": "latest",
+    "typescript": "^5.4.5"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
+}
